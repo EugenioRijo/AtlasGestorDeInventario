@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado de center a flex-start */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #343a40; /* Color de texto oscuro */
+    margin: 20px; /* Añadir margen para separación */
+}
+
+h1, h2 {
+    color: #495057; /* Color de encabezados */
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

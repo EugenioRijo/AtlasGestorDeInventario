@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ff6f00; /* Naranja */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    margin-right: 15px;
+    background-color: transparent; /* Asegura que el fondo sea transparente */
+    mix-blend-mode: multiply; /* Hace que el color blanco sea transparente */
+}
+
+.company-name {
+    font-size: 1.2em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.menu {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu button {
+    background-color: #ff6f00; /* Naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu button:hover {
+    background-color: #ff8c00; /* Naranja más claro */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.empty-inventory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.empty-inventory h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .company-name {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .stat {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.coming-soon h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.coming-soon img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu ul li a.active {
+    background-color: #495057; /* Color de fondo para la opción activa */
+    color: #ffffff; /* Color del texto para la opción activa */
+}
+
+/* Eliminar el sombreado de las filas de las tablas al pasar el cursor */
+table tr:hover {
+    background-color: transparent; /* No cambiar el color de fondo */
+}

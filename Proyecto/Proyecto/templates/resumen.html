@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen De Inventario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inventory.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <h1 class="company-name">Atlas: Gestión de Inventarios a Nuevas Alturas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <li><a href="{{ url_for('wallet') }}">Wallet: $0</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="menu">
+            <ul>
+                <li><a href="{{ url_for('registrar_producto') }}">Registrar Producto</a></li>
+                <li><a href="{{ url_for('empleados') }}">Empleados</a></li>
+                <li><a href="{{ url_for('categorias') }}">Categorías</a></li>
+                <li><a href="{{ url_for('productos') }}">Productos</a></li>
+                <li><a href="{{ url_for('historial_ventas') }}">Historial de ventas</a></li>
+                <li><a href="{{ url_for('realizar_venta')}}">Realizar venta</a></li>
+                <li><a href="{{ url_for('inventory') }}">Resumen De Inventario</a></li>
+                
+            </ul>
+        </aside>
+        <main>
+            <h1>Resumen De Inventario</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in inventario %}
+                    <tr>
+                        <td>{{ item.nombre }}</td>
+                        <td>{{ item.cantidad }}</td>
+                        <td>{{ item.precio }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <footer>
+        <p>Tu gestor de inventario preferido | Developed By Atlas<br    </footer>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow: auto; /* Permite el scrollbar del navegador */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    line-height: 1.6; /* Aumenta el espaciado entre líneas */
+    color: #333; /* Aumenta el contraste del texto */
+}
+
+.main-content {
+    overflow-y: auto; /* Permite el scroll solo en el contenedor principal */
+    height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la ventana */
+}
+
+header {
+    background-color: #ff6f00; /* Naranja */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.company-name {
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.welcome-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333; /* Gris oscuro */
+    font-size: 2.5em; /* Aumenta el tamaño de la fuente */
+}
+
+.btn {
+    background-color: #ff6f00; /* Naranja */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #e65c00; /* Naranja oscuro */
+}
+
+footer {
+    background-color: #343a40; /* Gris oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Aumenta el padding */
+    position: relative;
+    font-size: 14px; /* Aumenta el tamaño de la fuente */
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5; /* Mejora el espaciado entre líneas */
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    letter-spacing: 0.05em; /* Agrega espacio entre las letras */
+}
+
+#acerca-de, #caracteristicas, #contacto {
+    margin-top: 80px; /* Asegura que haya suficiente espacio entre las secciones */
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0 40px; /* Agrega margen inferior para separar el video de las secciones */
+}
+/* Asegúrate de que el contenedor del video tenga el tamaño adecuado */
+.video-container {
+    width: 100%;
+    max-width: 960px; /* Ajusta este valor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Añade un poco de espacio alrededor del video */
+}
+
+/* Ajusta el iframe para que ocupe todo el contenedor */
+.video-container iframe {
+    width: 100%;
+    height: 540px; /* Ajusta este valor según sea necesario */
+    border: none; /* Elimina el borde del iframe */
+    border-radius: 10px; /* Añade bordes redondeados si lo deseas */
+}
+
+.word-spacing {
+    word-spacing: 1.0em; /* Ajusta el valor según el espaciado deseado */
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.indented {
+    text-indent: 0em;
+    margin-left: 2em;
+    text-align: justify;
+}
+
+.title-indented {
+    margin-left: 1em;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: calc(33.333% - 20px);
+}
+
+.feature-card-new {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: calc(33.333% - 20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card-new:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al pasar el ratón */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .company-name {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-container {
+        padding: 20px;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+.btn-secondary {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #45a049; /* Verde oscuro */
+}
+
+header {
+    background-color: #ff6f00; /* Naranja */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+header .logo {
+    flex: 1 1 auto; /* Permitir que el logo se ajuste */
+}
+
+header nav {
+    flex: 2 1 auto; /* Permitir que la navegación se ajuste */
+}

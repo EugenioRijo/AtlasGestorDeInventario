@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Variables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Archivo</th>
+            <th>Variable</th>
+            <th>Definición</th>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>app</td>
+            <td>Instancia de la aplicación Flask que se utiliza para manejar las rutas y la configuración.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>db_config</td>
+            <td>Diccionario que contiene la configuración de conexión a la base de datos (host, user, password, database).</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>usuario</td>
+            <td>Variable que almacena el nombre de usuario ingresado por el usuario en el formulario de inicio de sesión o registro.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>contraseña</td>
+            <td>Variable que almacena la contraseña ingresada por el usuario en el formulario de inicio de sesión o registro.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>action</td>
+            <td>Variable que indica la acción que se está realizando, ya sea 'login' o 'register'.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>message</td>
+            <td>Variable que almacena mensajes de retroalimentación para el usuario, como errores o confirmaciones.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>conn</td>
+            <td>Variable que representa la conexión a la base de datos MySQL.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>cursor</td>
+            <td>Variable que permite ejecutar comandos SQL en la base de datos a través de la conexión.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>result</td>
+            <td>Variable que almacena el resultado de una consulta SQL, como un registro de usuario encontrado.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>productos</td>
+            <td>Variable que almacena la lista de productos obtenidos de la base de datos para mostrarlos en la interfaz.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>product_name</td>
+            <td>Variable que almacena el nombre del producto ingresado en el formulario de registro de productos.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>unit_price</td>
+            <td>Variable que almacena el precio unitario del producto ingresado en el formulario de registro de productos.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>quantity</td>
+            <td>Variable que almacena la cantidad del producto ingresado en el formulario de registro de productos.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>total_value</td>
+            <td>Variable que almacena el valor total de los productos en la base de datos, calculado como la suma del precio unitario por la cantidad.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>session</td>
+            <td>Objeto que almacena información sobre la sesión del usuario, como el nombre de usuario autenticado.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>root</td>
+            <td>Variable que representa la ventana principal de la aplicación Tkinter.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>obj</td>
+            <td>Instancia de la clase IMS, que representa la interfaz gráfica de la aplicación de gestión de inventario.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>icon_title</td>
+            <td>Variable que almacena la imagen del icono que se mostrará en la barra de título de la ventana.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>LeftMenu</td>
+            <td>Variable que representa el marco (Frame) que contiene el menú lateral de la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_menulogo</td>
+            <td>Variable que representa la etiqueta que muestra el logo en el menú lateral.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>btn_logout</td>
+            <td>Variable que representa el botón de cierre de sesión en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_clock</td>
+            <td>Variable que representa la etiqueta que muestra la fecha y hora en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_empleados</td>
+            <td>Variable que representa una etiqueta que muestra el total de empleados en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_proveedor</td>
+            <td>Variable que representa una etiqueta que muestra el total de proveedores en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_categoria</td>
+            <td>Variable que representa una etiqueta que muestra el total de categorías en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_productos</td>
+            <td>Variable que representa una etiqueta que muestra el total de productos en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>app.py</td>
+            <td>lbl_ventas</td>
+            <td>Variable que representa una etiqueta que muestra el total de ventas en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.root</td>
+            <td>Variable que representa la ventana principal de la aplicación Tkinter.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.MenuLogo</td>
+            <td>Variable que almacena la imagen del logo que se mostrará en el menú lateral.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.lbl_empleados</td>
+            <td>Variable que representa una etiqueta que muestra el total de empleados en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.lbl_proveedor</td>
+            <td>Variable que representa una etiqueta que muestra el total de proveedores en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.lbl_categoria</td>
+            <td>Variable que representa una etiqueta que muestra el total de categorías en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.lbl_productos</td>
+            <td>Variable que representa una etiqueta que muestra el total de productos en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>inventory.py</td>
+            <td>self.lbl_ventas</td>
+            <td>Variable que representa una etiqueta que muestra el total de ventas en la interfaz gráfica.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>app</td>
+            <td>Instancia de la aplicación Flask que se utiliza para manejar las rutas y la configuración.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>usuario</td>
+            <td>Variable que almacena el nombre de usuario ingresado por el usuario en el formulario de inicio de sesión o registro.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>contraseña</td>
+            <td>Variable que almacena la contraseña ingresada por el usuario en el formulario de inicio de sesión o registro.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>conn</td>
+            <td>Variable que representa la conexión a la base de datos MySQL.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>cursor</td>
+            <td>Variable que permite ejecutar comandos SQL en la base de datos a través de la conexión.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>result</td>
+            <td>Variable que almacena el resultado de una consulta SQL, como un registro de usuario encontrado.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>threading</td>
+            <td>Módulo que permite crear y manejar hilos en Python, utilizado para ejecutar la interfaz Tkinter en un hilo separado.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>root</td>
+            <td>Variable que representa la ventana principal de la aplicación Tkinter.</td>
+        </tr>
+        <tr>
+            <td>main.py</td>
+            <td>obj</td>
+            <td>Instancia de la clase IMS, que representa la interfaz gráfica de la aplicación de gestión de inventario.</td>
+        </tr>
+        <tr>
+            <td>styles.css</td>
+            <td>*</td>
+            <td>Selector universal que aplica el estilo a todos los elementos del documento.</td>
+        </tr>
+        <tr>
+            <td>styles.css</td>
+            <td>body</td>
+            <td>Estilo que define la apariencia del cuerpo del documento, incluyendo el fondo y la disposición.</td>
+        </tr>
+        <tr>
+            <td>styles.css</td>
+            <td>h1, h2, p, span</td>
+            <td>Estilos que definen la apariencia de los encabezados y párrafos en el documento.</td>
+        </tr>
+        <tr>
+            <td>inventory.css</td>
+            <td>header</td>
+            <td>Estilo que define la apariencia del encabezado de la página, incluyendo el color de fondo y el espaciado.</td>
+        </tr>
+        <tr>
+            <td>inventory.css</td>
+            <td>nav</td>
+            <td>Estilo que define la apariencia de la barra de navegación, incluyendo la disposición de los elementos.</td>
+        </tr>
+        <tr>
+            <td>inventory.css</td>
+            <td>table, th, td</td>
+            <td>Estilos que definen la apariencia de las tablas, incluyendo bordes y espaciado.</td>
+        </tr>
+        <tr>
+            <td>welcome.css</td>
+            <td>footer</td>
+            <td>Estilo que define la apariencia del pie de página, incluyendo el color de fondo y el texto.</td>
+        </tr>
+        <tr>
+            <td>categorias.html</td>
+            <td>{{ url_for('logout') }}</td>
+            <td>Función de Flask que genera la URL para la ruta de cierre de sesión.</td>
+        </tr>
+        <tr>
+            <td>empleados.html</td>
+            <td>{{ url_for('wallet') }}</td>
+            <td>Función de Flask que genera la URL para la ruta de la billetera.</td>
+        </tr>
+        <tr>
+            <td>index.html</td>
+            <td>{{ url_for('login') }}</td>
+            <td>Función de Flask que genera la URL para la ruta de inicio de sesión.</td>
+        </tr>
+        <tr>
+            <td>inventory.html</td>
+            <td>{{ total_value }}</td>
+            <td>Variable que se pasa a la plantilla para mostrar el valor total de los productos en la billetera.</td>
+        </tr>
+        <tr>
+            <td>register_product.html</td>
+            <td>{{ url_for('save_product') }}</td>
+            <td>Función de Flask que genera la URL para la ruta de guardar un producto.</td>
+        </tr>
+        <tr>
+            <td>welcome.html</td>
+            <td>{{ url_for('static', filename='logo.jpeg') }}</td>
+            <td>Función de Flask que genera la URL para acceder a archivos estáticos, como el logo.</td>
+        </tr>
+    </table>
+</body>
+</html>

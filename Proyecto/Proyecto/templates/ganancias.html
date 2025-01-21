@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganancias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inventory.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <h1 class="company-name">Atlas: Gestión de Inventarios a Nuevas Alturas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="menu">
+            <ul>
+                <li><a href="{{ url_for('categorias') }}" class="menu-link">Categorías</a></li>
+                <li><a href="{{ url_for('registrar_producto') }}" class="menu-link">Registrar Producto</a></li>
+                <li><a href="{{ url_for('ganancias') }}" class="menu-link">Ganancias</a></li>
+                <li><a href="{{ url_for('productos') }}" class="menu-link">Productos</a></li>
+                <li><a href="{{ url_for('historial_ventas') }}" class="menu-link">Historial de ventas</a></li>
+                <li><a href="{{ url_for('realizar_venta') }}" class="menu-link">Realizar venta</a></li>
+                <li><a href="{{ url_for('inventory') }}" class="menu-link">Resumen De Inventario</a></li>
+            </ul>
+        </aside>
+        
+        <main>
+            <div class="ganancias">
+                <h1>Ganancias de {{ usuario }}</h1>
+                <p>Ganancias brutas: {{ ganancias }}</p>
+
+                <h2>Seleccionar Periodo</h2>
+                <form method="get" action="{{ url_for('ganancias') }}">
+                    <table>
+                        <tr>
+                            <td><label for="start_date">Fecha de inicio:</label></td>
+                            <td><input type="date" id="start_date" name="start_date" value="{{ start_date.strftime('%Y-%m-%d') if start_date else '' }}"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="end_date">Fecha de fin:</label></td>
+                            <td><input type="date" id="end_date" name="end_date" value="{{ end_date.strftime('%Y-%m-%d') if end_date else '' }}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Filtrar</button></td>
+                        </tr>
+                    </table>
+                </form>
+
+                <h2>Detalle de Ventas</h2>
+                {% if detalles_ventas %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad Vendida</th>
+                                <th>Precio Total</th>
+                                <th>Costo Total</th>
+                                <th>Ganancia brutas</th>
+                                <th>Fecha de Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for detalle in detalles_ventas %}
+                                <tr>
+                                    <td>{{ detalle.nombre_producto }}</td>
+                                    <td>{{ detalle.cantidad_vendida }}</td>
+                                    <td>{{ detalle.precio_total }}</td>
+                                    <td>{{ detalle.costo_total_producto }}</td>
+                                    <td>{{ detalle.ganancia_bruta }}</td>
+                                    <td>{{ detalle.fecha_venta }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No hay ventas disponibles en el periodo seleccionado.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Tu gestor de inventario preferido | Developed By Atlas</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Set active class based on current URL
+            const currentPath = window.location.pathname;
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

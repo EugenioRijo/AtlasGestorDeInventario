@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Atlas</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"/>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="main-content">
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3 fade-in">
+                        <div class="flex items-center gap-4 text-[#1C160C]">
+                            <div class="size-4">
+                                <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo" class="w-16 h-auto fade-in">
+                            </div>
+                            <h2 class="text-[#1C160C] text-lg font-bold leading-tight tracking-[-0.015em] fade-in">Sistema de Inventario ATLAS</h2>
+                        </div>
+                        <div class="flex items-center gap-9 fade-in">
+                            <a class="text-[#1C160C] text-sm font-medium leading-normal fade-in" href="/login">Únete</a>
+                            <a class="text-[#1C160C] text-sm font-medium leading-normal fade-in" href="#acerca-de">Acerca de</a>
+                            <a class="text-[#1C160C] text-sm font-medium leading-normal fade-in" href="#caracteristicas">Características</a>
+                            <a class="text-[#1C160C] text-sm font-medium leading-normal fade-in" href="#contacto">Contacto</a>
+                        </div>
+                    </header>
+                    <main>
+                        <div class="px-40 flex flex-1 justify-center py-5 fade-in">
+                            <div class="layout-content-container flex flex-col max-w-[960px] flex-1 fade-in">
+                                <div class="@container fade-in">
+                                    <div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row fade-in">
+                                        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full fade-in">
+                                            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo" class="w-full h-auto rounded-xl fade-in">
+                                        </div>
+                                        <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center fade-in">
+                                            <div class="flex flex-col gap-2 text-left fade-in">
+                                                <h1 class="text-[#1C160C] text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] fade-in">Bienvenido al Sistema de Inventario ATLAS</h1>
+                                                <h2 class="text-[#1C160C] text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal fade-in">La misión de Atlas es proporcionar herramientas tecnológicas avanzadas, como el Software de Gestión de Almacenes (SGA), que permiten a las empresas mejorar su control sobre los inventarios y optimizar sus operaciones logísticas. Nuestra visión es ser líderes en el sector, ayudando a las organizaciones a adaptarse a un entorno empresarial competitivo mediante soluciones efectivas y eficientes.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 fade-in">
+                                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #b56621;">
+                                        <iframe src="https://www.youtube.com/embed/M32JRrVoVhQ?si=XxvDML1lOG2aOrlq&autoplay=1" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <p class="text-[#1C160C] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center word-spacing fade-in">Únete a los más de 2,000,000 de equipos en todo el mundo que utilizan Atlas para ser más productivos.</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+    <div class="mt-5">
+        <div class="flex justify-center gap-4 pb-3">
+            <a class="btn small-padding" href="{{ url_for('privacy') }}">Política de Privacidad</a>
+            <a class="btn small-padding" href="{{ url_for('terms') }}">Términos de Servicio</a>
+        </div>
+        <div class="mt-1"> <!-- Reduce el margen superior -->
+            <section id="acerca-de" class="py-5 px-5 mt-10 bg-white shadow-md rounded-lg p-4 mb-4 max-w-4xl mx-auto"> <!-- Reduce márgenes y padding -->
+                <h2 class="text-2xl font-bold mb-2">Acerca de</h2> <!-- Reduce margen inferior -->
+                <p>Atlas es una empresa especializada en servicios profesionales de gestión de inventarios, diseñada para optimizar y streamline los procesos logísticos de diferentes tipos de organizaciones. Nuestro objetivo principal es proporcionar soluciones tecnológicas y estratégicas que permitan a nuestros clientes tener un control preciso y eficiente de sus existencias.</p>
+            </section>
+            <section id="caracteristicas" class="py-5 px-5 mt-10 bg-white shadow-md rounded-lg p-4 mb-4 max-w-4xl mx-auto"> <!-- Reduce márgenes y padding -->
+                <h2 class="text-2xl font-bold mb-2">Características</h2> <!-- Reduce margen inferior -->
+                <p>El sistema de Atlas se caracteriza por su capacidad de monitorear en tiempo real los movimientos de inventario, generando alertas inmediatas sobre cambios significativos, potenciales desabastecimientos o excesos de stock. Mediante algoritmos avanzados e inteligencia artificial, la plataforma no solo registra los movimientos, sino que también predice comportamientos futuros, permitiendo a los gestores tomar decisiones proactivas y estratégicas.</p>
+            </section>
+            <div class="flex justify-center gap-4 mt-10 bg-white shadow-md rounded-lg p-4 mb-4 max-w-4xl mx-auto"> <!-- Contenedor flex -->
+                <section id="contacto" class="py-5 px-5 w-1/2"> <!-- Ajusta el ancho -->
+                    <h2 class="text-2xl font-bold mb-2">Contacto</h2> <!-- Reduce margen inferior -->
+                    <p>
+                        Representante de Ventas: Luis<br>
+                        Cargo: Director Comercial<br>
+                        Datos de Contacto<br>
+                        📞 Teléfonos:<br>
+                        Línea Principal: (55) 8976-4532<br>
+                        Whatsapp Empresarial: (55) 3412-6789<br>
+                        Línea Sin Costo: 800-ATLAS-INV<br>
+                        ✉️ Correos Electrónicos:<br>
+                        Contacto Comercial: <a href="mailto:ventas@atlasInventarios.com">ventas@atlasInventarios.com</a><br>
+                        Soporte Técnico: <a href="mailto:soporte@atlasInventarios.com">soporte@atlasInventarios.com</a><br>
+                        Información General: <a href="mailto:info@atlasInventarios.com">info@atlasInventarios.com</a><br>
+                        Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+                        Sábados: 10:00 AM - 2:00 PM
+                    </p>
+                </section>
+                <section id="foto" class="py-5 px-5 w-1/2"> <!-- Ajusta el ancho -->
+                    <img src="https://cdn.usegalileo.ai/sdxl10/cc85bd56-b3c4-4241-b210-8bd197b0be95.png" alt="Descripción de la foto" class="rounded-lg shadow-md"> <!-- Añade tu foto -->
+                </section>
+            </div>
+            <footer class="bg-gray-800 text-white p-4 mt-4"> <!-- Reduce margen superior -->
+                <div class="container mx-auto text-center">
+                    <p>&copy; 2025 ATLAS Sistema de Inventario. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+            </div>
+        </div>
+            </body>
+            </html>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const elements = document.querySelectorAll('.fade-in');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    }, { threshold: 0.1 });
+            
+                    elements.forEach(element => {
+                        observer.observe(element);
+                    });
+                });
+            </script>

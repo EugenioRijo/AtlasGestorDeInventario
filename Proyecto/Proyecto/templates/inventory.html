@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='inventory.css') }}">
+    <title>Inventario - Sistema de Gestión</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <h1 class="company-name">Atlas: Gestión de Inventarios a Nuevas Alturas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="menu">
+            <ul>
+                <li><a href="{{ url_for('categorias') }}" class="menu-link">Categorías</a></li>
+                <li><a href="{{ url_for('registrar_producto') }}" class="menu-link">Registrar Producto</a></li>
+                <li><a href="{{ url_for('ganancias') }}" class="menu-link">Ganancias</a></li>
+                <li><a href="{{ url_for('productos') }}" class="menu-link">Productos</a></li>
+                <li><a href="{{ url_for('historial_ventas') }}" class="menu-link">Historial de ventas</a></li>
+                <li><a href="{{ url_for('realizar_venta') }}" class="menu-link">Realizar venta</a></li>
+                <li><a href="{{ url_for('inventory') }}" class="menu-link">Resumen De Inventario</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Resumen de inventario</h2>
+            {% if productos %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Producto</th>
+                            <th>Categoría</th>
+                            <th>Costo</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in productos %}
+                            <tr>
+                                <td>{{ producto[1] }}</td>
+                                <td>{{ producto[5] }}</td>
+                                <td>${{ '{:,.2f}'.format(producto[2]) }}</td>
+                                <td>${{ producto[4] }}</td>
+                                <td>{{ producto[3] }}</td>
+                                <td>${{ '{:,.2f}'.format(producto[3] * producto[4]) }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="total-inventario">
+                    <h2>Valor total del inventario: ${{ '{:,.2f}'.format(total_inventario) }}</h2>
+                </div>
+            {% else %}
+                <div class="empty-inventory">
+                    <h1>Inventario vacío</h1>
+                </div>
+            {% endif %}
+        </main>
+    </div>
+
+    <footer>
+        <p>Tu gestor de inventario preferido | Developed By Atlas<br>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Set active class based on current URL
+            const currentPath = window.location.pathname;
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
